@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_projek/mahasiswa/mahasiswa_screen.dart';
 import 'package:my_projek/masakan/masakan_screen.dart';
+import 'package:my_projek/screens_customer/about_us.dart';
 import 'package:my_projek/screens_customer/detail_search.dart';
 // import 'package:my_projek/screens_customer/event_screen.dart';
 import 'package:my_projek/screens_customer/home_screen.dart';
@@ -142,6 +143,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
               ListTile(
+                leading: Icon(Icons.contact_emergency_outlined),
+                title: Text('Additional Info'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/divison-screen');
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.contact_emergency_outlined),
+                title: Text('Customer Screeen'),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/customer-screen');
+                },
+              ),
+              ListTile(
                 leading: Icon(Icons.food_bank),
                 title: Text('Makanan'),
                 onTap: () {
@@ -149,6 +166,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) => const MasakanScreen()),
+                  );
+                },
+              ),
+              ListTile(
+                leading: Icon(Icons.spatial_audio),
+                title: Text('About Us'),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AboutUs()),
                   );
                 },
               ),
